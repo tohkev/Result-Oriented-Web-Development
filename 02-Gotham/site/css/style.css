@@ -112,10 +112,13 @@ nav ul {
     font-weight: 300;
     font-size: 13px;
     color: #a78613;
+    flex-grow: 1;
 }
 
 .socials {
     display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
 }
 
 .socials a {
@@ -130,6 +133,14 @@ nav ul {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    margin-left: 10px;
+}
+
+.footer-nav a{
+    text-decoration: none;
+    color: #000;
+    padding: 0 18px;
+    flex-grow: 1;
 }
 
 
