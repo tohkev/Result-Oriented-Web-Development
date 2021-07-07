@@ -89,7 +89,7 @@ body {
     align-items: center;
 }
 
-.page-header nav ul {
+nav ul {
     display: flex;
     justify-content: space-between;
 }
@@ -102,10 +102,25 @@ body {
     padding: 0 35px;
 }
 
+/* ================================= Footer ======================= */
+.page-footer {
+    background-color: #f7c61d;
+    height: 63px;
+    width: 100%;
+}
 
+.page-footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-
-
+.page-footer div a {
+    font-family: Roboto;
+    padding: 0 18px;
+    color: #000;
+    text-decoration: none;
+}
 
 
 
