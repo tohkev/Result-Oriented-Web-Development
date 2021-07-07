@@ -71,7 +71,7 @@ body {
 
 /* ================================= Header ======================= */
 
-.page-header {
+.page-header, .page-footer {
     height: 67px;
     width: 100%;
     background: #f7c61d;
@@ -83,7 +83,7 @@ body {
     margin: 0 auto;
 }
 
-.page-header .wrapper {
+.page-header .wrapper, .page-footer .wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -104,23 +104,30 @@ nav ul {
 
 /* ================================= Footer ======================= */
 .page-footer {
-    background-color: #f7c61d;
-    height: 63px;
-    width: 100%;
+    margin: 100px 0;
 }
 
-.page-footer .wrapper {
+.copy {
+    font-family: Proxima;
+    font-weight: 300;
+    font-size: 13px;
+    color: #a78613;
+}
+
+.socials ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-.page-footer div a {
-    font-family: Roboto;
-    padding: 0 18px;
-    color: #000;
-    text-decoration: none;
+.socials a {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    border-radius: 50%;
 }
+
+
+
 
 
 
