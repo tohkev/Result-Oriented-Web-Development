@@ -114,7 +114,7 @@ nav ul {
     color: #a78613;
 }
 
-.socials ul {
+.socials {
     display: flex;
 }
 
@@ -124,6 +124,12 @@ nav ul {
     height: 45px;
     background: #fff;
     border-radius: 50%;
+    color: #f7c61d;
+    font-size: 24px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 
