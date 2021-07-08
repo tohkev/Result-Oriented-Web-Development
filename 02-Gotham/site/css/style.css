@@ -160,11 +160,17 @@ nav ul {
 /* ================================= Main ======================= */
 .main {
     display: flex;
-    margin-top: 40px;
 }
 
 main {
     width: 77%;
+}
+
+.main .wrapper h1 {
+    font-family: Proxima;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 40px 0 15px;
 }
 
 .right-sidebar{
@@ -177,16 +183,23 @@ img {
 
 article {
     display: flex;
+    margin-bottom: 50px;
 }
 
 .article-left {
     width: 30%;
 }
 
+.article-left img {
+    border-radius: 3px;
+}
+
 .article-right {
     width: 70%;
     display: flex;
     flex-direction: column;
+    padding-left: 25px;
+    justify-content: space-between;
 }
 
 .article-right h2 {
@@ -199,23 +212,21 @@ article {
     color: #999999;
     font-size: 13px;
     font-weight: 300;
-    margin-top: 20px;
-    margin-bottom: 24px;
 }
 
-.meta span::after {
+.meta span::after, .additional span::after {
     display: inline-block;
     content: "|";
     color: #999;
     font-size: 13px;
 }
 
-.meta span:last-child::after{
+.meta span:last-child::after, .additional span:last-child::after{
     display: None;
 }
 
 .category {
-    color: #edcd60;
+    color: #e3b002;
 }
 
 .description {
@@ -224,12 +235,36 @@ article {
     color: #555;
 }
 
-.main .wrapper h1 {
-    font-family: Proxima;
-    font-weight: 700;
-    margin-bottom: 18px;
-    font-size: 24px;
+.additional {
+    font-size: 16px;
+    color: #999;
+    font-family: Roboto;
+    font-weight: 300;
 }
+
+.comments {
+    color: #e3b002;
+}
+
+.fa-comment {
+    color: #999;
+}
+
+.views::after {
+    margin: 0 10px;
+}
+
+.views::before, .comments::before {
+    content: '\f06e';
+    font-family: 'Font Awesome 5 Free';
+    font-size:16px;
+    margin-right: 10px;
+}
+
+.comments::before {
+    content: '\f075'
+}
+
 
 
 
