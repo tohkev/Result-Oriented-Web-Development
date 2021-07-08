@@ -52,6 +52,13 @@ table {
 }
 
 @font-face {
+    font-family: Roboto;
+    src: url('../fonts/Roboto-Light.woff') format('woff'),
+        url('../fonts/Roboto-Light.ttf') format('truetype');
+    font-family: 300;
+}
+
+@font-face {
     font-family: Proxima;
     src: url('../fonts/ProximaNova-Light.woff') format('woff'),
         url('../fonts/ProximaNova-Light.ttf') format('truetype');
@@ -182,10 +189,46 @@ article {
     flex-direction: column;
 }
 
+.article-right h2 {
+    font-family: Proxima;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.meta {
+    color: #999999;
+    font-size: 13px;
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 24px;
+}
+
+.meta span::after {
+    display: inline-block;
+    content: "|";
+    color: #999;
+    font-size: 13px;
+}
+
+.meta span:last-child::after{
+    display: None;
+}
+
+.category {
+    color: #edcd60;
+}
+
+.description {
+    font-family: Roboto;
+    font-size: 16px;
+    color: #555;
+}
+
 .main .wrapper h1 {
     font-family: Proxima;
     font-weight: 700;
     margin-bottom: 18px;
+    font-size: 24px;
 }
 
 
