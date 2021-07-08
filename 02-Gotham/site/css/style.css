@@ -64,6 +64,13 @@ table {
         url('../fonts/ProximaNova-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: Proxima;
+    src: url('../fonts/ProximaNova-Bold.woff') format('woff'),
+        url('../fonts/ProximaNova-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
 body {
     font-size: 16px;
     font-family: Roboto;
@@ -143,6 +150,21 @@ nav ul {
     flex-grow: 1;
 }
 
+/* ================================= Main ======================= */
+.main {
+    display: flex;
+    margin-top: 40px;
+}
+
+main article {
+    display: flex;
+}
+
+.main .wrapper h1 {
+    font-family: Proxima;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
 
 
 
