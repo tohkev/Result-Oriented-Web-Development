@@ -235,6 +235,11 @@ article {
     color: #555;
 }
 
+.description::after {
+    content: '>';
+    color: #e3b002;
+}
+
 .additional {
     font-size: 16px;
     color: #999;
@@ -262,9 +267,23 @@ article {
 }
 
 .comments::before {
-    content: '\f075'
+    content: '\f075';
+    color: #999;
 }
 
+button {
+    width: 170px;
+    height: 42px;
+    background: transparent;
+    color: black;
+    font-family: Roboto;
+    text-transform: uppercase;
+    border: 1px solid #e3b002;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
 
 
 
