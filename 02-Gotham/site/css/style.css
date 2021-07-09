@@ -166,7 +166,7 @@ main {
     width: 77%;
 }
 
-.main .wrapper h1 {
+h1 {
     font-family: Proxima;
     font-weight: 700;
     font-size: 24px;
@@ -285,9 +285,12 @@ button {
     margin: 0 auto;
 }
 
+/* ================================= Aside ======================= */
 
-
-
+aside.right-sidebar {
+    padding-top: 78px;
+    padding-left: 65px;
+}
 
 
 
