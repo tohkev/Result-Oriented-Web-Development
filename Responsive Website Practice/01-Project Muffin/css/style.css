@@ -96,11 +96,34 @@ header, footer {
 
 /* =====================Footer=========================== */
 
+footer .wrapper {
+    display: flex;
+}
+
+.footer-left, .footer-right {
+    width: 50%
+}
+
 .copy {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
 }
 
+.socials {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .socials a {
     font-size: 24px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #ff7f00;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 10px;
 }
