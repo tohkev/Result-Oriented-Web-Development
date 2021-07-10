@@ -46,18 +46,23 @@ table {
 
 /* =====================Header=========================== */
 
-header {
-    background: url(images/bg.png);
+header, footer {
+    background: url(../images/bg.png);
+    height: 150px;
 }
 
 .wrapper {
     width: 1200px;
     height: 100%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
 }
 
+/* =====================Main=========================== */
+
 .main {
-    margin-top: 84px;
+    margin: 84px 0 123px;
 }
 
 .main .wrapper {
@@ -91,3 +96,11 @@ header {
 
 /* =====================Footer=========================== */
 
+.copy {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+.socials a {
+    font-size: 24px;
+}
