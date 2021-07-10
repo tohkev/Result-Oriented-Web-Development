@@ -107,6 +107,7 @@ footer .wrapper {
 .copy {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
+    margin-bottom: 0;
 }
 
 .socials {
@@ -126,4 +127,44 @@ footer .wrapper {
     align-items: center;
     text-decoration: none;
     margin-left: 10px;
+}
+
+/* =====================Media Queries=========================== */
+
+@media (max-width:1200px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .main .wrapper {
+        flex-direction: column;
+    }
+
+    .wrapper {
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+
+    .article-left, .article-right {
+        width:100%;
+    }
+
+    .article-right {
+        font-size: 36px;
+    }
+
+    footer .wrapper {
+        flex-direction: column;
+    }
+
+    .footer-left, .footer-right {
+        width: 100%;
+    }
+
+    .socials {
+        justify-content: flex-start;
+    }
 }
