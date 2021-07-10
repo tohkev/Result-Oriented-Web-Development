@@ -488,13 +488,15 @@ aside.right-sidebar {
     }
 
     .page-footer .wrapper {
-        flex-wrap: wrap-reverse;
+        flex-wrap: wrap;
         align-items: center;
         padding: 20px 15px;
     }
 
     .copy {
         width: 100%;
+        order: 1;
+        padding-top: 20px;
     }
 
     .footer-nav {
@@ -507,5 +509,33 @@ aside.right-sidebar {
 }
 
 @media (max-width: 36.125em) {
+    .articles article {
+        width: 100%;
+        margin-right: 0;
+    }
 
+    .calendar-widget {
+        width: 100%;
+    }
+
+    .footer-nav, .socials {
+        width: 100%;
+    }
+
+    .socials {
+        justify-content: flex-start;
+        margin: 20px 0;
+    }
+
+    .copy {
+        padding: 0;
+    }
+
+    .footer-nav a {
+        padding: 0;
+    }
+
+    .popular-news {
+        width: 100%;
+    }
 }
