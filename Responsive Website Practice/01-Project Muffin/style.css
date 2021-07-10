@@ -56,7 +56,11 @@ header {
     margin: 0 auto;
 }
 
-main .wrapper {
+.main {
+    margin-top: 84px;
+}
+
+.main .wrapper {
     display: flex;
     justify-content: space-between;
 }
@@ -73,5 +77,17 @@ main .wrapper {
 .article-right {
     width: 50%;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
-    font-size: 36px;
+    font-size: 40px;
+    line-height: 1.5;
 }
+
+.intro, .favorite {
+    margin-top: 69px;
+}
+
+.bio {
+    margin-top: 34px;
+}
+
+/* =====================Footer=========================== */
+
