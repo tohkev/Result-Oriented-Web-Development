@@ -123,9 +123,39 @@ table {
     margin: 0 15px;
 }
 
+.page-search {
+    position: relative;
+}
+
 .page-search-field {
-    width: 0;
-    visibility: hidden;
+    width: 970px;
+    position: absolute;
+    right: 40px;
+    top: -7px;
+    font-weight: 300;
+    font-size: 16px;
+    padding: 5px;
+    height: 30px;
+    -webkit-appearance: textfield;
+    display: none;
+}
+
+#search-switch:checked~.page-search-field, #search-switch:checked~.page-search-field-label {
+    display:block;
+}
+
+.page-search-field-label {
+    position: absolute;
+    right: 40px;
+    top: -7px;
+    height: 30px;
+    background: transparent;
+    width: 100px;
+    line-height: 30px;
+    color: #000;
+    font-weight: 400;
+    font-size: 15px;
+    display: none;
 }
 
 .international-block {
