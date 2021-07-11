@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    font-family: 'Helvetica Neue',Helvetica,Arial,Utkal,sans-serif
 }
 ol, ul {
 	list-style: none;
@@ -79,6 +80,7 @@ table {
     float: right;
     display: flex;
     height: 100%;
+    align-items: center;
 }
 
 .page-nav ul {
@@ -116,3 +118,11 @@ table {
     width: 100%;
 }
 
+.search-switch-label {
+    margin: 0 15px;
+}
+
+.page-search-field {
+    width: 0;
+    visibility: hidden;
+}

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>CNN - Breaking News</title>
 </head>
@@ -38,16 +39,17 @@
             </div>
             <div class="header-right">
                 <div class="international-edition">
-
+                    <input type="checkbox" id="international-switch" hidden>
+                    <label for="internation-switch">International Edition +</label>
                 </div>
                 <div class="page-search">
                     <input type="checkbox" id="search-switch" hidden>
-                    <input type="search">
-                    <label for="search-switch">s</label>
+                    <input type="search" class="page-search-field">
+                    <label for="search-switch" class="search-switch-label"><i class="fas fa-search"></i></label>
                 </div>
                 <div class="header-expanded-menu">
                     <input type="checkbox" id="expanded-switcher" hidden>
-                    <label for="expanded-switcher">=</label>
+                    <label for="expanded-switcher"><i class="fas fa-bars"></i></label>
                 </div>
             </div>
         </div>
