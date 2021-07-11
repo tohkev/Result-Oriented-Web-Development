@@ -23,24 +23,42 @@
                 </div>
                 <nav class="page-nav">
                     <ul>
-                        <li><a href="">item 1</a></li>
-                        <li><a href="">item 2</a></li>
-                        <li><a href="">item 3</a></li>
-                        <li><a href="">item 4</a></li>
-                        <li><a href="">item 5</a></li>
-                        <li><a href="">item 6</a></li>
-                        <li><a href="">item 7</a></li>
-                        <li><a href="">item 8</a></li>
-                        <li><a href="">item 9</a></li>
-                        <li><a href="">item 10</a></li>
-                        <li><a href="">item 11</a></li>
+                        <li><a href="">Regions</a></li>
+                        <li><a href="">U.S. Politics</a></li>
+                        <li><a href="">Money</a></li>
+                        <li><a href="">Entertainment</a></li>
+                        <li><a href="">Tech</a></li>
+                        <li><a href="">Sport</a></li>
+                        <li><a href="">Travel</a></li>
+                        <li><a href="">Style</a></li>
+                        <li><a href="">Health</a></li>
+                        <li><a href="">Video </a></li>
+                        <li><a href="">VR </a></li>
                     </ul>
                 </nav>
             </div>
             <div class="header-right">
                 <div class="international-edition">
                     <input type="checkbox" id="international-switch" hidden>
-                    <label for="internation-switch">International Edition +</label>
+                    <label for="international-switch">International Edition +</label>
+                    <div class="international-block">
+                        <ul>
+                            <li>U.S.</li>
+                            <li>Arabic</li>
+                            <li>Español</li>
+                        </ul>
+                        <hr>
+                        <p>Set edition preference:</p>
+                        <div class="row-block">
+                            <input type="radio" id="us-choice" name="edition-type">
+                            <label for="us-choice">U.S.</label>
+                            <input type="radio" id="international" name="edition-type" checked>
+                            <label for="international-choice">International</label>
+                        </div>
+                        <div class="row-block">
+                            <button class="confirm">Confirm</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="page-search">
                     <input type="checkbox" id="search-switch" hidden>
