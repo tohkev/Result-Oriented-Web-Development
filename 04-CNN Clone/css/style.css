@@ -318,11 +318,11 @@ label:hover {
 /* ==========MAIN================= */
 /* ================================= */
 main {
-    height: 100vh;
-    padding-top: 15px;
+    height: 400vh;
+    padding-top: 35px;
 }
 
-article img {
+img {
     width: 100%;
 }
 
@@ -367,6 +367,10 @@ h1 a:hover {
     font-weight: bold;
 }
 
+/* article {
+    margin-bottom: 10px;
+} */
+
 article h3 {
     padding: 7px 0;
     line-height: 20px;
@@ -374,7 +378,7 @@ article h3 {
 }
 
 .last-news {
-    font-size: 15px;
+    font-size: 14.5px;
     font-weight: 300;
     color: #262626;
 }
@@ -412,7 +416,17 @@ article h3 {
     margin: -23px 30px 30px;
 }
 
+.category {
+    padding: 7px;
+    background-color: rgb(242, 242, 242);
+    font-weight: 700;
+}
 
+.category-header{
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.2;
+}
 
 
 
