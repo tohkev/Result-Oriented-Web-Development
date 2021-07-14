@@ -359,7 +359,7 @@ h1 a:hover {
 
 .label-block {
     position: absolute;
-    bottom: 3px;
+    bottom: 2px;
     left: 0;
 }
 
@@ -420,12 +420,38 @@ article h3 {
     padding: 7px;
     background-color: rgb(242, 242, 242);
     font-weight: 700;
+    color: #404040;
+    font-size: 15px;
 }
 
 .category-header{
     font-size: 19px;
     font-weight: 300;
     line-height: 1.2;
+}
+
+.full-gray {
+    background-color: #e6e6e6;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.13;
+    padding: 7px 10px;
+    z-index: 1;
+    width: 100%;
+    position: relative;
+    right: 0;
+    left: 0;
+    bottom: -1px;
+    border: none;
+}
+
+.top-border {
+    border-top: 1px solid #d8d8d8;
+}
+
+.no-margin {
+    margin: 0;
 }
 
 
