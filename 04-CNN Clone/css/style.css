@@ -463,7 +463,13 @@ article h4 {
     padding-right: 0;
 }
 
+.transparent-bg {
+    opacity: 0.85;
+}
 
+.mt-spacing {
+    margin-top: 25px;
+}
 
 
 
