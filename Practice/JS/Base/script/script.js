@@ -188,20 +188,63 @@
 //     console.log(`Name: ${input}: ${count} times`);
 // }
 
-let input = prompt("Enter a sentence:");
-let words = [];
+// let input = prompt("Enter a sentence:");
+// let words = [];
 
-function toCamelCase(string) {
-    split = string.split(" ");
-    for (let i = 0; i < split.length; i++) {
-        if (i === 0) {
-            words.push(split[i].toLowerCase());
-        } else {
-            words.push(split[i][0].toUpperCase() + split[i].substring(1));
-        }
-    }
-    return words.join('');
-}
+// function toCamelCase(string) {
+//     split = string.split(" ");
+//     for (let i = 0; i < split.length; i++) {
+//         if (i === 0) {
+//             words.push(split[i].toLowerCase());
+//         } else {
+//             words.push(split[i][0].toUpperCase() + split[i].substring(1));
+//         }
+//     }
+//     return words.join('');
+// }
 
-console.log(toCamelCase(input));
+// console.log(toCamelCase(input));
 
+
+// let task = document.createElement('li');
+// task.textContent = 'task 3';
+
+// adding to the ul element
+// let list = document.querySelector("ul");
+// list.appendChild(task);
+
+//adding to the ul element before the first item
+// let list = document.querySelector('ul');
+// let firstElement = list.children[0];
+// list.insertBefore(task, firstElement);
+
+//removing an item
+// let list = document.querySelector('ul');
+// let element = list.children[1];
+// element.remove();
+
+//MANIPULATING STYLE
+// let p = document.querySelector(".green");
+// p.style.color = "green";
+// p.style.marginBottom = '30px';
+// p.style.backgroundColor = 'black';
+// p.style.fontSize = "50px";
+
+//EVENTS
+let button = document.querySelector('.btn');
+
+// button.onclick = function () {
+//     alert("You have clicked the button");
+// }
+
+// button.onmouseover = function () {
+//     alert("Woah what are you doing?")
+// }
+
+button.addEventListener('click', function () {
+    console.log("What")
+})
+
+button.addEventListener('click', function () {
+    console.log("okay stop")
+})
