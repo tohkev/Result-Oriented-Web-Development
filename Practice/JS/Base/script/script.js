@@ -101,27 +101,107 @@
 // n = prompt("Enter a number:");
 // repeat(text, n);
 
-function tips(money, service) {
-    if (service === "bad") {
-        return money * 0.10;
-    } else if (service === "ok") {
-        return money * 0.15;
-    } else if (service === "good") {
-        return money * 0.20;
-    } else {
-        return "That is not a service option";
+// function tips(money, service) {
+//     if (service === "bad") {
+//         return money * 0.10;
+//     } else if (service === "ok") {
+//         return money * 0.15;
+//     } else if (service === "good") {
+//         return money * 0.20;
+//     } else {
+//         return "That is not a service option";
+//     }
+// }
+
+// money = +prompt("Enter the total:");
+// service = prompt("Enter the quality of service (bad, ok, good):")
+// console.log(`You would tip $${tips(money, service)}`);
+
+
+
+// let nums = [1, 2, 3, 4];
+// // let sum = 0;
+
+// // for (let i = 0; i < nums.length; i++) {
+// //     sum += nums[i];
+// // }
+// // console.log(sum);
+// let sum = 0
+
+// nums.forEach(function(e, i, a) {
+//     sum += e
+// })
+
+// let nums = [-2, 16, 41, 21, 0, 6, -4];
+// let evenCount = 0;
+// let oddCount = 0;
+// let zeroCount = 0;
+
+// for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] === 0) {
+//         zeroCount++;
+//     } else if (nums[i] % 2 === 1) {
+//         oddCount++;
+//     } else if (nums[i] % 2 === 0) {
+//         evenCount++;
+//     }
+// }
+
+// console.log(`Even: ${evenCount}`)
+// console.log(`Odd: ${oddCount}`)
+// console.log(`Zero: ${zeroCount}`)
+
+
+// let min = nums[0];
+// let minIndex;
+// let max = nums[0];
+// let maxIndex;
+
+// for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] < min) {
+//         min = nums[i];
+//         minIndex = i;
+//     }
+//     if (nums[i] > max) {
+//         max = nums[i];
+//         maxIndex = i;
+//     }
+// }
+
+// console.log(`Min: ${min}, index: ${minIndex}`)
+// console.log(`Max: ${max}, index: ${maxIndex}`)
+
+// let names = ['Kevin', 'Francis', 'Daniel', "Wyjun", "Ann", "Paul", "Kevin", "Kevin", "Ann"];
+
+// let input = prompt("Enter a name:")
+// let count = 0;
+
+// for (let i = 0; i < names.length; i++) {
+//     if (names[i].toLowerCase() === input.toLowerCase()) {
+//         count++;
+//     }
+// }
+
+// if (count === 1) {
+//     console.log(`Name: ${input}: ${count} time`);
+// } else {
+//     console.log(`Name: ${input}: ${count} times`);
+// }
+
+let input = prompt("Enter a sentence:");
+let words = [];
+
+function toCamelCase(string) {
+    split = string.split(" ");
+    for (let i = 0; i < split.length; i++) {
+        if (i === 0) {
+            words.push(split[i].toLowerCase());
+        } else {
+            words.push(split[i][0].toUpperCase() + split[i].substring(1));
+        }
     }
+    return words.join('');
 }
 
-money = +prompt("Enter the total:");
-service = prompt("Enter the quality of service (bad, ok, good):")
-console.log(`You would tip $${tips(money, service)}`);
-
-
-
-
-
-
-
-
+console.log(toCamelCase(input));
 
