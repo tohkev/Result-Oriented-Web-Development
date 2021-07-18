@@ -88,10 +88,14 @@ h3 {
 
 .container {
     margin-top: 20px;
+    position: relative;
 }
 
 #block {
     width: 150px;
     height: 150px;
     background-color: #f00;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
