@@ -231,20 +231,36 @@
 // p.style.fontSize = "50px";
 
 //EVENTS
-let button = document.querySelector('.btn');
+// let button = document.querySelector('.btn');
 
-// button.onclick = function () {
-//     alert("You have clicked the button");
-// }
+// // button.onclick = function () {
+// //     alert("You have clicked the button");
+// // }
 
-// button.onmouseover = function () {
-//     alert("Woah what are you doing?")
-// }
+// // button.onmouseover = function () {
+// //     alert("Woah what are you doing?")
+// // }
 
-button.addEventListener('click', function () {
-    console.log("What")
-})
+// button.addEventListener('click', function () {
+//     console.log("What")
+// })
 
-button.addEventListener('click', function () {
-    console.log("okay stop")
-})
+// button.addEventListener('click', function () {
+//     console.log("okay stop")
+// })
+
+// KEYBOARD EVENTS
+let inp = document.querySelectorAll('input');
+
+for (let i = 0; i < inp.length; i++) {
+    inp[i].addEventListener('keypress', function (event) {
+        if (event.key === "Enter") {
+            console.log(this.value);
+        }
+    })
+}
+
+
+// inp.addEventListener('keypress', function () {
+//     console.log(inp.value)
+// })
