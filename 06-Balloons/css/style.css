@@ -1,0 +1,78 @@
+body {
+    /* prevents the scrollbar from appearing */
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.balloon {
+    width: 100px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Allows the balloons to float to the top */
+    position: absolute;
+    top: 100vh;
+}
+
+.balloon-red {
+    background-image: url('../images/balloon-red.png');
+}
+.balloon-green {
+    background-image: url('../images/balloon-green.png');
+}
+.balloon-blue {
+    background-image: url('../images/balloon-blue.png');
+}
+.balloon-violet {
+    background-image: url('../images/balloon-violet.png');
+}
+.balloon-yellow {
+    background-image: url('../images/balloon-yellow.png');
+}
+
+.total-shadow {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* z-index does not work with position static */
+    position: relative;
+    z-index: 1000;
+}
+
+.total-block {
+    background: #fff;
+    padding: 10px 100px 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.win {
+    display: none;
+}
+
+.lose {
+    
+}
+
+.score-block {
+    background-color: #efefef;
+    width: 300px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+    /* moves the block to the middle */
+    position: absolute;
+    bottom:0;
+    left: calc(50% - 150px);
+}
