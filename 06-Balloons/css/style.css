@@ -16,7 +16,7 @@ body {
     background-repeat: no-repeat;
     /* Allows the balloons to float to the top */
     position: absolute;
-    top: 100vh;
+    top: 70vh;
 }
 
 .balloon-red {
@@ -45,6 +45,7 @@ body {
     /* z-index does not work with position static */
     position: relative;
     z-index: 1000;
+    display: none;
 }
 
 .total-block {
@@ -57,10 +58,6 @@ body {
 
 .win {
     display: none;
-}
-
-.lose {
-    
 }
 
 .score-block {
