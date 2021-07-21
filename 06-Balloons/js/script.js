@@ -2,6 +2,8 @@ let colors = ['red', 'yellow', 'violet', 'blue', 'green'];
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
 let body = document.body
+let scoreElement = document.querySelector(".score")
+let score = 0;
 
 function createBalloon() {
     let div = document.createElement('div');
@@ -18,7 +20,7 @@ function createBalloon() {
     body.appendChild(div);
 
     //this would animate the balloon after creation
-    animateBalloon(div)
+    animateBalloon(div);
 }
 
 function animateBalloon(element) {
@@ -43,3 +45,12 @@ function animateBalloon(element) {
 function deleteBalloon(element) {
     element.remove();
 }
+
+//this adds balloon popping functionality through event delegation
+document.addEventListener('click', function (event) {
+    if (event.target.classList.contains("balloon")) {
+        deleteBalloon(event.target);
+        score += 1;
+        scoreElement.innerText = score;
+    }
+})
