@@ -1,5 +1,6 @@
 let colors = ['red', 'yellow', 'violet', 'blue', 'green'];
 let windowWidth = window.innerWidth;
+let windowHeight = window.innerHeight;
 let body = document.body
 
 function createBalloon() {
@@ -15,4 +16,30 @@ function createBalloon() {
 
     //creates the balloon
     body.appendChild(div);
+
+    //this would animate the balloon after creation
+    animateBalloon(div)
+}
+
+function animateBalloon(element) {
+    //this sets the initial position of the balloon
+    let pos = 0;
+    //this executes the frame function every x ms
+    let interval = setInterval(frame, 10);
+
+    function frame() {
+        // if the balloon's position is oast the height of the window + balloon, it will stop
+        if (pos >= (windowHeight + 200)) {
+            clearInterval(interval);
+            deleteBalloon(element);
+        } else {
+            // if not, the balloon will gradually increase
+            pos++;
+            element.style.top = windowHeight - pos + 'px';
+        }
+    }
+}
+
+function deleteBalloon(element) {
+    element.remove();
 }
