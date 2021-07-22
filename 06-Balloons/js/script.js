@@ -2,8 +2,11 @@ let colors = ['red', 'yellow', 'violet', 'blue', 'green'];
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
 let body = document.body
-let scoreElement = document.querySelector(".score")
-let score = 0;
+let scores = document.querySelectorAll(".score")
+let totalScore = 0;
+let endScore = 10;
+let currentBalloon = 0;
+let gameOver = false;
 
 function createBalloon() {
     let div = document.createElement('div');
@@ -15,6 +18,10 @@ function createBalloon() {
     //randomizing position
     let randPos = Math.floor(Math.random() * (windowWidth - 100));
     div.style.left = randPos + 'px';
+
+    // assigning a data number to each balloon created so that the deleteBalloon function will work properly
+    div.dataset.number = currentBalloon;
+    currentBalloon++
 
     //creates the balloon
     body.appendChild(div);
@@ -33,7 +40,7 @@ function animateBalloon(element) {
         // if the balloon's position is oast the height of the window + balloon, it will stop
         if (pos >= (windowHeight + 200)) {
             clearInterval(interval);
-            deleteBalloon(element);
+            gameOver = true;
         } else {
             // if not, the balloon will gradually increase
             pos++;
@@ -43,14 +50,22 @@ function animateBalloon(element) {
 }
 
 function deleteBalloon(element) {
-    element.remove();
+    if (document.querySelector('[data-number="' + element.dataset.number + '"]') !== null) {
+        element.remove();
+        totalScore++;
+        updateScore();
+    }
+}
+
+function updateScore() {
+    for (let i = 0; i < scores.length; i++) {
+        scores[i].textContent = totalScore;
+    }
 }
 
 //this adds balloon popping functionality through event delegation
 document.addEventListener('click', function (event) {
     if (event.target.classList.contains("balloon")) {
         deleteBalloon(event.target);
-        score += 1;
-        scoreElement.innerText = score;
     }
 })
