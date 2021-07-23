@@ -1,19 +1,21 @@
 let colors = ['red', 'yellow', 'violet', 'blue', 'green'];
 let windowWidth = window.innerWidth;
 let windowHeight = window.innerHeight;
-let body = document.body
-let scores = document.querySelectorAll(".score")
+let body = document.body;
+let scores = document.querySelectorAll(".score");
 let totalScore = 0;
-let endScore = 50;
+let endScore = 100;
 let currentBalloon = 0;
 let gameOver = false;
-let totalShadow = document.querySelector('.total-shadow')
+let totalShadow = document.querySelector('.total-shadow');
+let startWindow = document.querySelector('.start-game-window');
+let startButton = document.querySelector(".start-game-btn");
 
 function createBalloon() {
     let div = document.createElement('div');
 
     //randomizing color
-    let randColor = Math.floor(Math.random() * colors.length)
+    let randColor = Math.floor(Math.random() * colors.length);
     div.className = "balloon balloon-" + colors[randColor];
 
     //randomizing position
@@ -22,7 +24,7 @@ function createBalloon() {
 
     // assigning a data number to each balloon created so that the deleteBalloon function will work properly
     div.dataset.number = currentBalloon;
-    currentBalloon++
+    currentBalloon++;
 
     //creates the balloon
     body.appendChild(div);
@@ -58,6 +60,13 @@ function deleteBalloon(element) {
     element.remove();
     totalScore++;
     updateScore();
+    playPop();
+}
+
+function playPop() {
+    let audio = document.createElement('audio');
+    audio.src = './sounds/pop.mp3';
+    audio.play();
 }
 
 function updateScore() {
@@ -65,7 +74,6 @@ function updateScore() {
         scores[i].textContent = totalScore;
     }
 }
-
 
 //this function would start the game through timed creation of balloons
 function startGame() {
@@ -119,4 +127,9 @@ document.querySelector('.cancel').addEventListener('click', function () {
 })
 
 
-startGame()
+startButton.addEventListener('click', function () {
+    startWindow.style.display = "none";
+    document.querySelector('.bg-music').play();
+    startGame();
+})
+
