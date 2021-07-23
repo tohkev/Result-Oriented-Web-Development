@@ -16,7 +16,7 @@ body {
     background-repeat: no-repeat;
     /* Allows the balloons to float to the top */
     position: absolute;
-    top: 70vh;
+    top: 100vh;
 }
 
 .balloon-red {
@@ -39,7 +39,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     /* z-index does not work with position static */
@@ -57,6 +57,10 @@ body {
 }
 
 .win {
+    display: none;
+}
+
+.lose {
     display: none;
 }
 
