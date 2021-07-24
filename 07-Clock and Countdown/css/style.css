@@ -81,7 +81,7 @@ body {
     height: 30%;
     left: calc(50% - 2px);
     transform-origin: 2px calc(100% - 40px);
-    transform: rotate(45deg)
+    /* transform: rotate(45deg) */
 }
 
 .clock-minutes {
@@ -89,7 +89,7 @@ body {
     height: 40%;
     left: calc(50% - 2px);
     transform-origin: 2px calc(100% - 40px);
-    transform: rotate(45deg)
+    /* transform: rotate(45deg) */
 }
 
 .clock-seconds {
@@ -97,7 +97,7 @@ body {
     height: 50%;
     left: calc(50% - 1px);
     transform-origin: 1px calc(100% - 40px);
-    transform: rotate(45deg)
+    /* transform: rotate(45deg) */
 }
 
 .countdown {
