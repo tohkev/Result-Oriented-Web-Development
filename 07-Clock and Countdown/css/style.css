@@ -1,0 +1,54 @@
+
+
+/* ==============================================*/
+/* ============= BODY ======================*/
+/* ==============================================*/
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-video-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1000;
+    top: 0;
+    left: 0;
+}
+
+/* .bg-video {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover;
+    object-position: center; 
+}*/
+
+/* .clock-face {
+    width: 80vmin;
+    height: 80vmin;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock-face::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 98%;
+    height: 98%;
+    left: 1%;
+    top: 1%;
+    border: 1px solid white;
+    border-radius: 50%;
+} */
