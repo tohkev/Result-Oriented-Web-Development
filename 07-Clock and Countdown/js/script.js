@@ -6,7 +6,7 @@ let second = 1000;
 let minute = second * 60;
 let hour = minute * 60;
 let day = hour * 24;
-let finalDate = new Date('Jul 25, 2021 00:00:00');
+let finalDate = new Date('Jul 26, 2021 00:00:00');
 
 let countdownD = document.querySelector('.countdown-days');
 let countdownH = document.querySelector('.countdown-hours');
@@ -15,8 +15,12 @@ let countdownS = document.querySelector('.countdown-seconds');
 
 
 let startClock = () => {
-    updateTime()
-    setInterval(updateTime, 1000)
+    updateTime();
+    updateCountdown();
+    setInterval(function () {
+        updateTime();
+        updateCountdown();
+    }, 1000);
 }
 
 let updateTime = () => {
@@ -41,7 +45,12 @@ let convertMsToDHMS = (ms) => {
 let updateCountdown = () => {
     let now = new Date();
     let diff = finalDate - now;
-    console.log(convertMsToDHMS(diff));
+    let diffObject = convertMsToDHMS(diff);
+    // using ternary operators to check if it is a single digit number, if so the value will be modified
+    countdownD.textContent = diffObject.days >= 10 ? diffObject.days : '0' + diffObject.days;
+    countdownH.textContent = diffObject.hours >= 10 ? diffObject.hours : '0' + diffObject.hours;
+    countdownM.textContent = diffObject.minutes >= 10 ? diffObject.minutes : '0' + diffObject.minutes;
+    countdownS.textContent = diffObject.seconds >= 10 ? diffObject.seconds : '0' + diffObject.seconds;
 }
 
 
