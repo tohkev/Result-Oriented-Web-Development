@@ -113,3 +113,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.line-through {
+    text-decoration: line-through;
+}
