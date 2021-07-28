@@ -26,13 +26,15 @@ $(document).ready(function () {
     })
 
     // CHECKED TASK
-    // let checkboxes = $('.task-checked input');
-    // checkboxes.on('change', function () {
-    //     $(this).parent().next().toggleClass('line-through');
-    // })
-    // this uses event delegation
+    // this uses event delegation to find newly created elements
     taskList.on('change', '.task-checked input', function () {
         $(this).parent().next().toggleClass('line-through');
+    })
+
+    // REORDERING TASKS
+    // this uses the jQuery UI sortable script
+    $(function () {
+        $('#sortable').sortable();
     })
 
 })
