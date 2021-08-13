@@ -3,9 +3,3 @@ async function getPosts() {
         .then((response) => response.json())
         .then((data) => data)
 }
-
-
-// let postBtn = document.querySelector('.add-post');
-// postBtn.addEventListener('click', () => {
-
-// })

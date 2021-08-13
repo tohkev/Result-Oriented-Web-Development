@@ -9,24 +9,28 @@ mongoose.connect('mongodb://localhost/travels').then(() => {
     console.log('Something went wrong')
 })
 
-//test for seeing if posts will be recorded on the DB
-// let post1 = new Post({
-//     id: 2,
-//     title: 'Statue of Liberty',
-//     date: new Date(),
-//     description: 'Some Description',
-//     text: 'Some Text',
-//     country: 'USA',
-//     imageURL: '/images/1.jpg'
-// });
+app.use(express.json());
 
-// post1.save().then(() => {
-//     console.log('Country has been saved');
-// });
+let id = 1;
 
 app.get('/posts', async (req, resp) => {
     let posts = await Post.find();
     resp.send(posts);
+})
+
+app.post('/posts', async (req, resp) => {
+    let reqBody = req.body;
+    let newPost = new Post({
+        id: id++,
+        title: reqBody.title,
+        date: new Date(),
+        description: reqBody.description,
+        text: reqBody.text,
+        country: reqBody.country,
+        imageURL: reqBody.imageURL
+    })
+    await newPost.save();
+    resp.send('Created!')
 })
 
 app.use(express.static('public'));
