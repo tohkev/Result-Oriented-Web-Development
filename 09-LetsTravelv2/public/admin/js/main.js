@@ -4,15 +4,17 @@ document.addEventListener('DOMContentLoaded', async function () {
     let posts = await getPosts();
     let articles = document.querySelector('.articles');
     articles.innerHTML = '';
+    let orderNumber = 1;
     posts.forEach((post) => {
         let postHTML = `
         <article class=" d-flex justify-content-between align-items-center articles-inline">
-            <div class="id w5">${post.id}</div>
+            <div class="num w5">${orderNumber++}</div>
+            <input type="hidden" value="${post.id}" class="id">
             <div class="name w30">${post.title}</div>
             <div class="date w30">${post.date}</div>
             <div class="countr w20">${post.country}</div>
             <div class="edit w10"><button class="btn btn-link">Edit</button></div>
-            <div class="remove w5"><button class="btn btn-link">X</button></div>
+            <div class="remove w5"><button class="btn btn-link btn-remove">X</button></div>
         </article>`;
         articles.insertAdjacentHTML("beforeend", postHTML);
         console.log(post.title);
