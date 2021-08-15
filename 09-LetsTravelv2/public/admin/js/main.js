@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             <div class="name w30">${post.title}</div>
             <div class="date w30">${post.date}</div>
             <div class="countr w20">${post.country}</div>
-            <div class="edit w10"><button class="btn btn-link">Edit</button></div>
+            <div class="edit w10"><button class="btn btn-link btn-edit">Edit</button></div>
             <div class="remove w5"><button class="btn btn-link btn-remove">X</button></div>
         </article>`;
         articles.insertAdjacentHTML("beforeend", postHTML);
@@ -28,5 +28,4 @@ addPostBtn.addEventListener('click', () => {
     let createTab = document.getElementById('v-create-post');
     createTab.classList.add('show');
     createTab.classList.add('active');
-
 })

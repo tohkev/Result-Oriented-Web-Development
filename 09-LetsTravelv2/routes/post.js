@@ -10,6 +10,12 @@ router.get('/', async (req, resp) => {
     resp.send(posts);
 })
 
+router.get('/:id', async (req, resp) => {
+    let id = req.params.id;
+    let post = await Post.findOne({ id: id });
+    resp.send(post);
+})
+
 router.post('/', async (req, resp) => {
     let reqBody = req.body;
     let imgPath;
@@ -38,5 +44,12 @@ router.delete('/:id', async (req, res) => {
     await Post.deleteOne({ id: id })
     res.send('Deleted');
 })
+
+router.put('/:id', async (req, res) => {
+    let id = req.params.id;
+    await Post.updateOne({ id: id }, req.body);
+    res.send('Updated!')
+})
+
 
 module.exports = router;
