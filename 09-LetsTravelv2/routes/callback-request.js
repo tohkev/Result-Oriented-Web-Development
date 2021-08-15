@@ -3,25 +3,32 @@ let uniqid = require('uniqid');
 let express = require('express');
 let router = express.Router();
 
+// let cr = new CallbackRequest({
+//     id: '1234',
+//     phoneNumber: '+1111111111',
+//     date: new Date()
+// })
+// cr.save();
+
 router.get('/', async (req, res) => {
-    resp.send(await CallbackRequest.find());
+    res.send(await CallbackRequest.find());
 })
 
 router.post('/', async (req, res) => {
     let reqBody = req.body;
     let newRequest = new CallbackRequest({
-        id: uniqid,
-        phoneNumber: req.phoneNumber,
+        id: uniqid(),
+        phoneNumber: reqBody.phoneNumber,
         date: new Date()
     })
     await newRequest.save();
-    resp.send('Accepted');
+    res.send('Accepted');
 });
 
 router.delete('/:id', async (req, res) => {
     let id = req.params.id;
     await CallbackRequest.deleteOne({ id: id });
-    resp.send('Deleted');
+    res.send('Deleted');
 });
 
 module.exports = router;
