@@ -3,6 +3,7 @@ let app = express();
 let mongoose = require('mongoose');
 let multer = require('multer');
 let postRouter = require('./routes/post');
+let callbackRouter = require('./routes/callback-request')
 
 
 mongoose.connect('mongodb://localhost/travels').then(() => {
@@ -21,6 +22,7 @@ let imageStorage = multer.diskStorage({
 app.use(multer({ storage: imageStorage }).single('imageFile'));
 app.use(express.static('public'));
 app.use('/posts', postRouter);
+app.use('/callback-request', callbackRouter);
 
 app.listen(3000, () => {
     console.log('Listening 3000...');
