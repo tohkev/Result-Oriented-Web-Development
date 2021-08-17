@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
         message: reqBody.message,
         date: new Date()
     })
-    await newRequest.save();
+    await newEmail.save();
     res.send('Accepted');
 })
 

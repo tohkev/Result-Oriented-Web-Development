@@ -3,6 +3,7 @@ let addPostBtn = document.querySelector('.create-post-btn');
 document.addEventListener('DOMContentLoaded', async function () {
     addPosts();
     addCallbackRequests();
+    addEmailRequests();
 })
 
 addPostBtn.addEventListener('click', () => {
@@ -39,18 +40,38 @@ async function addCallbackRequests() {
     let callbackRequests = await getCallbackRequests();
     let requestBlock = document.querySelector('#v-pills-callback');
     requestBlock.innerHTML = '';
-    let OrderNumber = 1;
+    let orderNumber = 1;
     callbackRequests.forEach((request) => {
         let requestHTML = `        
         <article class=" d-flex justify-content-between align-items-center articles-inline">
-            <div class="num w5">${OrderNumber++}</div>
+            <div class="num w5">${orderNumber++}</div>
             <input type="hidden" value="${request.id}" class="id">
             <div class="name w60">${request.phoneNumber}</div>
             <div class="date w30">${request.date}</div>
             <div class="remove w5"><button class="btn btn-link btn-remove">X</button></div>
         </article>`;
         requestBlock.insertAdjacentHTML('beforeend', requestHTML);
-        console.log(callbackRequests.phoneNumber)
+        console.log(request.phoneNumber)
     })
+}
 
+async function addEmailRequests() {
+    let emailRequests = await getEmailRequests();
+    let requestBlock = document.querySelector('#v-pills-mails');
+    requestBlock.innerHTML = '';
+    let orderNumber = 1;
+    emailRequests.forEach((request) => {
+        let requestHTML = `
+    <article class=" d-flex justify-content-between align-items-center articles-inline">
+        <div class="num w5">${orderNumber++}</div>
+        <input type="hidden" value="${request.id}" class="id">
+        <div class="name w30">${request.name}</div>
+        <div class="email w30">${request.email}</div>
+        <div class="date w30">${request.date}</div>
+        <div class="remove w5"><button class="btn btn-link btn-remove">X</button></div>
+        <div class="message w100">${request.message}</div>
+    </article>`
+        requestBlock.insertAdjacentHTML('beforeend', requestHTML);
+        console.log(request.name)
+    })
 }

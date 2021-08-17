@@ -27,6 +27,10 @@ footer>.container, footer .row{
     padding: 15px;
 }
 
+.w100 {
+    width: 100%
+}
+
 .w60 {
     width: 60%;
 }
@@ -57,4 +61,5 @@ footer>.container, footer .row{
 
 .articles-inline {
     padding-left: 10px;
+    flex-wrap: wrap;
 }

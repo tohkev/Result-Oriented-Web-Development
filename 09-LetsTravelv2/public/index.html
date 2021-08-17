@@ -123,22 +123,23 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form class="email-request-form">
                             <div class="mb-3">
                                 <label for="your-name" class="form-label">Your Name</label>
                                 <input type="text" class="form-control" id="your-name" placeholder="Name">
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Email">
+                                <input type="email" class="form-control" id="your-email" placeholder="Email">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="message">Message</label>
-                                <textarea id="message" rows="3" class="form-control" placeholder=""></textarea>
+                                <textarea id="your-message" rows="3" class="form-control" placeholder=""></textarea>
                             </div>
                     </div>
                     <div class="modal-footer justify-content-start">
-                        <button type="button" class="btn btn-primary">Submit</button>
+                        <input type="submit" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#contact-us">
                     </div>
                 </div>
             </div>
@@ -152,6 +153,7 @@
         crossorigin="anonymous"></script>
     <script src="js/posts.js"></script>
     <script src="js/post-callback-request.js"></script>
+    <script src="js/emails.js"></script>
     <script src="js/main.js"></script>
 </body>
 
