@@ -3,8 +3,9 @@ let app = express();
 let mongoose = require('mongoose');
 let multer = require('multer');
 let postRouter = require('./routes/post');
-let callbackRouter = require('./routes/callback-request')
-let emailRouter = require('./routes/emails')
+let callbackRouter = require('./routes/callback-request');
+let emailRouter = require('./routes/emails');
+let Post = require('./models/post').Post;
 
 app.set('view engine', 'ejs');
 
@@ -27,12 +28,14 @@ app.use('/posts', postRouter);
 app.use('/callback-request', callbackRouter);
 app.use('/emails', emailRouter);
 
-app.get('/sight', (req, resp) => {
+app.get('/sight', async (req, resp) => {
+    let id = req.query.id;
+    let post = await Post.findOne({ id: id });
     resp.render('sight', {
-        title: 'Big Ben',
-        imageURL: 'https://cdn.pixabay.com/photo/2017/06/11/18/03/big-ben-2393098__340.jpg',
-        date: '2021-07-04',
-        text: 'Big Ben Text'
+        title: post.title,
+        imageURL: post.imageURL,
+        date: post.date,
+        text: post.text
     })
 })
 
