@@ -2,7 +2,7 @@ let User = require('../models/users').User;
 let express = require('express');
 let router = express.Router();
 let bcrypt = require('bcrypt');
-let auth = require('../controllers/auth')
+let auth = require('../controllers/auth');
 
 router.post('/login', async (req, res) => {
     let email = req.body.email;

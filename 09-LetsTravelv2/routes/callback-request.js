@@ -2,6 +2,8 @@ let CallbackRequest = require('../models/callback-request').CallbackRequest;
 let uniqid = require('uniqid');
 let express = require('express');
 let router = express.Router();
+let authMiddleware = require('../middleware/auth');
+
 
 // let cr = new CallbackRequest({
 //     id: '1234',
@@ -10,7 +12,7 @@ let router = express.Router();
 // })
 // cr.save();
 
-router.get('/', async (req, res) => {
+router.get('/', authMiddleware, async (req, res) => {
     res.send(await CallbackRequest.find());
 })
 
@@ -25,7 +27,7 @@ router.post('/', async (req, res) => {
     res.send('Accepted');
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', authMiddleware, async (req, res) => {
     let id = req.params.id;
     await CallbackRequest.deleteOne({ id: id });
     res.send('Deleted');

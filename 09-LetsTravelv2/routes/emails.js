@@ -2,6 +2,7 @@ let Email = require('../models/email').Email;
 let uniqid = require('uniqid');
 let express = require('express');
 let router = express.Router();
+let authMiddleware = require('../middleware/auth');
 
 // let em = new Email({
 //     id: '123456',
@@ -12,7 +13,7 @@ let router = express.Router();
 // })
 // em.save();
 
-router.get('/', async (req, res) => {
+router.get('/', authMiddleware, async (req, res) => {
     res.send(await Email.find());
 })
 
@@ -29,7 +30,7 @@ router.post('/', async (req, res) => {
     res.send('Accepted');
 })
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', authMiddleware, async (req, res) => {
     let id = req.params.id;
     await Email.deleteOne({ id: id });
     res.send('Deleted');
