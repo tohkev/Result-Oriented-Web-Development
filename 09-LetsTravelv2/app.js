@@ -57,6 +57,8 @@ app.get('/login', (res, resp) => {
     resp.render('login');
 })
 
-app.listen(3000, () => {
+let port = process.env.PORT || 3000;
+
+app.listen(port, () => {
     console.log('Listening 3000...');
 })
