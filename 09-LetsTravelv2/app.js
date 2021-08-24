@@ -12,7 +12,7 @@ let auth = require('./controllers/auth')
 
 app.set('view engine', 'ejs');
 
-mongoose.connect('mongodb://localhost/travels').then(() => {
+mongoose.connect('mongodb+srv://<username>:<password>@cluster0.anpep.mongodb.net/travels?retryWrites=true&w=majority').then(() => {
     console.log('Connected to MongoDB')
 }).catch(() => {
     console.log('Something went wrong')
