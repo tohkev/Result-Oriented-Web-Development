@@ -1,5 +1,5 @@
 async function getEmailRequests() {
-    return await fetch('http://localhost:3000/emails')
+    return await fetch(' /emails')
         .then((resp) => resp.json())
         .then((data) => data)
 }
